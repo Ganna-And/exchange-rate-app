@@ -19,11 +19,11 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     this.exchangeRateService.getExchangeRates().subscribe((data: any) => {
       console.log(data)
-      this.usdToUah = data.conversion_rates.UAH;
+      this.usdToUah = +(data.conversion_rates.UAH).toFixed(2);
     });
     this.exchangeRateService.getExchangeRatesEUR().subscribe((data: any) => {
       console.log(data)
-      this.eurToUah = data.conversion_rates.UAH;
+      this.eurToUah = +(data.conversion_rates.UAH).toFixed(2);
     });
   }
 }
