@@ -12,7 +12,7 @@ export class ExchangeRateService {
   private apiPairCovertable ='https://v6.exchangerate-api.com/v6/a0a761bdd94eb8f29e5cbffb/pair/EUR/GBP'
 
 
-  // Replace 'YOUR_API_KEY' with your actual API key
+  
   private apiKey = 'a0a761bdd94eb8f29e5cbffb';
 
   constructor(private http: HttpClient) {}
@@ -53,6 +53,7 @@ export class ExchangeRateService {
     });
   
     return this.http.get(apiUrl, { headers }).pipe(
+      
       catchError((error: any) => {
         console.error('Error fetching exchange rates:', error);
         return throwError(error);

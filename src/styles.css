@@ -1,3 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
 /* styles.css */
 @import "~bootstrap/dist/css/bootstrap.css";
+
+
+body{
+    background-image: url('https://uploads-ssl.webflow.com/640f58ff49b6ea1b41b55ff3/6412e4b173926c44f3c46204_%D0%B8%D0%BF-%D1%8C%D1%89%D0%B8.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    height: 100vh;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    color:#FCF5EE;
+}
+
+app-root{
+    height: 100vh;
+    width: 100%;
+}
+

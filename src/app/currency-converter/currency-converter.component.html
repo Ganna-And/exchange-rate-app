@@ -1,24 +1,31 @@
-<div>
+<div class="main-container">
+  <div class="content">
   <h2>Currency Conversion</h2>
-  
   <div class="inputs">
+    <div class="input">
     <input id="amountFrom" [(ngModel)]="amountFrom" type="number" min="0" placeholder="Enter amount" (focus)="resetAmountTo()">
-    <label for="currencyFrom">From: </label>
+    <label for="currencyFrom"></label>
     <select id="currencyFrom" [(ngModel)]="currencyFrom">
       <option value="USD">USD</option>
       <option value="EUR">EUR</option>
       <option value="UAH">UAH</option>
     </select>
-  
+  </div>
+  <div class="input">
     <input id="amountTo" [(ngModel)]="amountTo" type="number" min="0" placeholder="Enter amount" (focus)="resetAmountFrom()">
-    <label for="currencyTo">To: </label>
+    <label for="currencyTo"> </label>
     <select id="currencyTo" [(ngModel)]="currencyTo">
       <option value="USD">USD</option>
       <option value="EUR">EUR</option>
       <option value="UAH">UAH</option>
     </select>
   </div>
+  </div>
 
-  <button (click)="convertCurrency()">Convert</button>
-  <p>Conversion Result: {{ conversionResult }}</p>
+  <button class="convert" (click)="convertCurrency()">Convert</button>
+  <div class="desc">
+   <p [ngClass]="{'error-message': isError}">Conversion result: {{ conversionResult }}</p>
+  <p>Updates from:{{timeStamp}} </p>
+</div>
+</div>
 </div>
